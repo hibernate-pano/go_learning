@@ -27,3 +27,17 @@ func TestSwitchMultiCase(t *testing.T) {
 		}
 	}
 }
+
+// 测试switch case 表达式
+func TestSwitchCaseCondition(t *testing.T) {
+	for i := 0; i < 10; i++ {
+		switch {
+		case i%2 == 0:
+			t.Log("Even")
+		case i%2 == 1:
+			t.Log("Odd")
+		default:
+			t.Log("Out Of Limit")
+		}
+	}
+}
