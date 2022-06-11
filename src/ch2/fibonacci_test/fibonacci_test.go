@@ -1,4 +1,4 @@
-package fibonacci
+package fibonacci_test
 
 import (
 	"testing"
