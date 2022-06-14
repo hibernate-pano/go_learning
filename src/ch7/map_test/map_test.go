@@ -2,7 +2,8 @@ package map_test
 
 import "testing"
 
-func TestMap(t *testing.T) {
+// map 只有len 没有cap
+func TestInitMap(t *testing.T) {
 	m := map[string]int{"one": 1, "two": 2}
 	t.Logf("len m  %d", len(m))
 	m1 := map[string]int{}
@@ -13,4 +14,17 @@ func TestMap(t *testing.T) {
 	m2["key"] = 1
 	t.Logf("len m2 %d", len(m2))
 	t.Log(m, m1, m2)
+}
+
+func TestAccessNotExistingKey(t *testing.T) {
+	m := map[string]int{"one": 1, "two": 2}
+	// 访问不存在的key，会默认为零值
+	t.Log(m["three"])
+	m["three"] = 3
+	// 手动判断零值还是值=0
+	if v, ok := m["three"]; ok {
+		t.Logf("Existing! value = %d", v)
+	} else {
+		t.Log("Not Existing!")
+	}
 }
