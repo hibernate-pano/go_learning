@@ -29,6 +29,7 @@ func TestAccessNotExistingKey(t *testing.T) {
 	}
 }
 
+// map的遍历也是使用range
 func TestMapRange(t *testing.T) {
 	m := map[string]int{"one": 1, "two": 2}
 	m["three"] = 3
