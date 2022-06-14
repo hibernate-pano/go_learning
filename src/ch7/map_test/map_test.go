@@ -28,3 +28,11 @@ func TestAccessNotExistingKey(t *testing.T) {
 		t.Log("Not Existing!")
 	}
 }
+
+func TestMapRange(t *testing.T) {
+	m := map[string]int{"one": 1, "two": 2}
+	m["three"] = 3
+	for k, v := range m {
+		t.Log(k, v)
+	}
+}

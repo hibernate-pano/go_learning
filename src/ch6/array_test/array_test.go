@@ -18,8 +18,8 @@ func TestArrayLoop(t *testing.T) {
 		t.Log(arr2[i])
 	}
 
-	for i, e := range arr2 {
-		t.Log(i, e)
+	for i, v := range arr2 {
+		t.Log(i, v)
 	}
 
 	for _, e := range arr2 {
