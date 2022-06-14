@@ -39,6 +39,7 @@ func TestMapForSet(t *testing.T) {
 		} else {
 			// 不存在添加到切片，并更新该下标的值
 			res = append(res, v)
+			// 随便赋值，只是为了证明map中有这个key
 			m[v] = rand.Int()
 		}
 	}
