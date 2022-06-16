@@ -34,4 +34,5 @@ func TestCreateEmployeeEntity(t *testing.T) {
 	t.Logf("a location is : %X", &a)
 	t.Logf("e2 is : %T", e2)
 	t.Logf("e2 is : %X", &e2)
+	t.Logf("e2 is : %X", &e2.Id)
 }
