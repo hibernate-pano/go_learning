@@ -36,3 +36,9 @@ func TestCreateEmployeeEntity(t *testing.T) {
 	t.Logf("e2 is : %X", &e2)
 	t.Logf("e2 is : %X", &e2.Id)
 }
+
+func TestDemo(t *testing.T) {
+
+	t.Log("Hello World")
+
+}
