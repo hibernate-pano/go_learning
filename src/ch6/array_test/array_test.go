@@ -32,4 +32,5 @@ func TestArraySubstring(t *testing.T) {
 	t.Log(a[:3])
 	t.Log(a[1:3])
 	t.Log(a[1:])
+	t.Log(a[1:5])
 }

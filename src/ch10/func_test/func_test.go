@@ -34,7 +34,8 @@ func slowFunc(param int) int {
 
 func TestFuncInFunc(t *testing.T) {
 	timeFunc := timeSpent(slowFunc)
-	timeFunc(10)
+	param := timeFunc(10)
+	t.Log(param)
 }
 
 // 测试可变长度参数

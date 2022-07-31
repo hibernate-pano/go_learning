@@ -13,12 +13,13 @@ func TestSliceInit(t *testing.T) {
 	t.Log(len(s1), cap(s1))
 
 	// make 关键字
-	s2 := make([]int, 3, 5)
+	s2 := make([]int, 3, 8)
 	t.Log(len(s2), cap(s2))
 	t.Log(s2[0], s2[1], s2[2])
 
 	for i := 0; i < 100; i++ {
 		s2 = append(s2, i)
+		// slice的cap会自动扩容，每次扩容x2
 		t.Log(len(s2), cap(s2))
 	}
 }

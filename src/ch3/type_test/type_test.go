@@ -29,6 +29,7 @@ func TestPoint(t *testing.T) {
 	a := 1
 	aPtr := &a
 	t.Log(a, aPtr)
+	t.Log(*aPtr)
 	t.Logf("%T %T", a, aPtr)
 }
 

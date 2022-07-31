@@ -24,7 +24,13 @@ func TestStringConv(t *testing.T) {
 	s := strconv.Itoa(10)
 	t.Log("string" + s)
 	// 字符串转数字,需要显示处理转换错误逻辑
-	if i, err := strconv.Atoi("20"); err == nil {
+	if i, err := strconv.Atoi("20x"); err == nil {
 		t.Log(10 + i)
 	}
+
+	atoi, err := strconv.Atoi("20x")
+	if err != nil {
+		return
+	}
+	t.Log(atoi)
 }
