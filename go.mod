@@ -1,4 +1,4 @@
-module go_learning
+module kit/pano/go_learning
 
 go 1.18
 
